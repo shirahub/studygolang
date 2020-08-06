@@ -1,0 +1,34 @@
+Dokumentasi ParkirClient dan ParkirServer
+
+Tujuan: Membuat aplikasi parkir dengan net/http
+
+    1. ParkirClient
+
+        ◦ Membuka web client di port 8081
+        ◦ Memiliki 2 url mapping : /getParkID dan /parkOut
+
+            ▪ /getParkID
+                • Menerima method Get
+                • Ketika dipanggil dengan Get, akan mengirim GET request ke ParkirServer dengan url “http://localhost:8082/generateID”
+                • Response dari ParkirServer berupa string akan dibaca, marshal to json, dan kemudian di-write ke dalam response body Postman
+
+            ▪ /parkOut
+                • Menerima method Post dengan request body
+                • Ketika dipanggil dengan Post dan request body di Postman diisi dengan data yang sesuai, akan mengirim POST request ke ParkirServer dengan url “http://localhost:8082/keluar”
+                • Response dari ParkirServer akan dibaca dan kemudian di-write ke dalam response body Postman
+
+    2. ParkirServer
+       
+        ◦ Membuka web server di port 8082 
+        ◦ Memiliki 2 url mapping: /generateID dan /keluar
+
+            ▪ /generateID
+                • Ketika dipanggil, akan membuat id parkir berupa string dan di-write sebagai Response.
+
+            ▪ /keluar
+                • Ketika dipanggil, akan membaca request body, unmarshal ke dalam type Parker, lalu menjalankan function untuk menghitung biaya parkir. Sebuah type Nota yang mengandung data waktu masuk, waktu keluar, kendaraan, nomor plat, dan biaya parkir akan dihasilkan, marshal to json, kemudian di-write sebagai response.
+
+
+
+
+
