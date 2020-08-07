@@ -12,4 +12,7 @@ Day 2: Selasa, 4 Agustus 2020<br>
 Day 3: Rabu, 5 Agustus 2020<br>
 1. Membuat Aplikasi Parkir (Client dan Server) dengan net/http 
 
+Day 4: Kamis, 6 Agustus 2020<br>
+2. Membuat Aplikasi Parkir (Client dan Server) dengan go mod dan gRCP
+
 <img src="https://miro.medium.com/max/13194/1*PKDa1ZG8ZJl8XNs_AkAixA.png" style="width:128px;height:68px;">
